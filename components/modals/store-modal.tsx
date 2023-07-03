@@ -1,9 +1,11 @@
-" use client"
+'use client'
 
-import { useStoreModalStore } from "@/hooks/use-store-modal";
+import { useStoreModal } from "@/hooks/use-store-modal";
 import { Modal } from "@/components/ui/modal";
+
 export const StoreModal = () => {
-    const storeModal = useStoreModalStore();
+    const storeModal = useStoreModal();
+
     return (
         <Modal
             title="Create store"
@@ -11,7 +13,7 @@ export const StoreModal = () => {
             isOpen={storeModal.isOpen}
             onClose={storeModal.onClose}
         >
-            Creatr your form here
+            Create your form here
         </Modal>
     )
 }
