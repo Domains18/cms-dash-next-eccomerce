@@ -1,4 +1,6 @@
 import prismadb from "@/lib/prismadb";
+import Navbar from "@/components/navbar";
+
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 import React from "react";
@@ -24,7 +26,7 @@ export default async function DashboardLayout({ children, params}: {
     }
     return(
         <>
-            <div>This is the navbar</div>
+            <Navbar/>
             {children}
         </>
     )
