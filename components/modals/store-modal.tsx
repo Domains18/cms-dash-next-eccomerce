@@ -13,6 +13,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import { redirect } from "next/navigation";
 
 
 const formSchema = z.object({
@@ -38,6 +39,7 @@ export const StoreModal = () => {
             setisloading(true);
             const response = await axios.post('/api/stores', values);
             toast.success("store successfully created");
+            window.location.assign(`/${response.data.id}`)
         } catch (error) {
             toast.error("something went wrong")
         } finally {
