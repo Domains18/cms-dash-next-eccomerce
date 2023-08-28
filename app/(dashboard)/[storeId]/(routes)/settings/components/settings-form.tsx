@@ -45,7 +45,7 @@ const SettingsForm: React.FC<SettingsFormProps> = ({
                     <Trash className="h-4 w-4" />
                 </Button>
             </div>
-            <Separator/>
+            <Separator />
         </>
     );
 }
